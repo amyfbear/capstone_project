@@ -72,6 +72,6 @@ For the business they should look at different vendors and request price sheets 
 
 [Touchbistro](https://cloud.touchbistro.com/)
 
-[towardsdatascience](hhttps://towardsdatascience.com/time-series-forecasting-with-a-sarima-model-db051b7ae459)
+[towardsdatascience](https://towardsdatascience.com/time-series-forecasting-with-a-sarima-model-db051b7ae459)
 
 [machine learning mastery](https://machinelearningmastery.com/grid-search-arima-hyperparameters-with-python/)
