@@ -5,7 +5,7 @@
 
 ## Problem Statement
 
-I am a consultant hired by restaurant owners from a wine and pizzeria concept, since new management has taken over their costs have gone through the roof and now, they are 25K in the red on average each month. For them to recoup their loss I need to figure out how to properly structure their budgets. I will create a SARIMAX predictive sales model to base my customized budgets from. My metric will be RMSE to gauge my model's performance with because the output will be on the same scale as my data. A successful model will output predictive sales values within a $500.00 range. My model Selection metric will be AIC because of it's ideal use case of smaller data sets such as mine.
+I am a consultant hired by restaurant owners from a wine and pizzeria concept, since new management has taken over their costs have gone through the roof and now, they are 25K in the red on average each month. For them to recoup their loss I need to figure out how to properly structure their budgets. I will create a SARIMAX predictive sales model to base my customized budgets from. My metric will be RMSE to gauge my model's performance with because the output will be on the same scale as my data. A successful model will output predictive sales values within a $530 range. My model Selection metric will be AIC because of it's ideal use case of smaller data sets such as mine.
 
 # Executive Summary
 
@@ -17,8 +17,8 @@ Bill Count, Labor Cost, Margin and Net Sales all have similar distributions as G
 
 While exploring quarterly trends I discovered that Daily Gross Sales were stagnant with a growth on average of 1.1 percent when comparing Year over Year Q3 VS Q4 of 2018 and 2019 data. The most interesting observation I noticed was Q1 to Q2 of 2019 the daily gross sales mean increased by $749.00. The quarterly features distributions for the most part tend to follow the same trend as as above, where they are similar to daily gross sales's and are left skewed. 
 
-These features with similar distributions are also proved to be correlated by visualing the heatmap correaltion graph.Bill count, labor cost and voids tend to have more similar distributions on a quarterly range than on a whole data range. In order to model you must ensure stationarity before modeling. My data has a p-value 0.000280 which gives us evidence to reject the null hypothesis, meaning we accept that our time series is stationary.The ACF and PACF plots showed that the obervations are follow similar trends and are correlated. However ultimately I chose my parameters based on a manual gridsearch of my data. For my model prep I had to split the index manually at the row with 75% of my data for my train set and the other 35% for my test/validation set.Indexes had to be converted to Datetime index with a frequency of “d” in order to be fed into the model. 
-My model's RMSE is off by a mean of around 458.36 which is way better than my baseline model.
+These features with similar distributions are also proved to be correlated by visualing the heatmap correaltion graph.Bill count, labor cost and voids tend to have more similar distributions on a quarterly range than on a whole data range. In order to model you must ensure stationarity before modeling. My data has a p-value 0.000280 which gives us evidence to reject the null hypothesis, meaning we accept that our time series is stationary.The ACF and PACF plots showed that the obervations are follow similar trends and are correlated. However ultimately I chose my parameters based on a manual gridsearch of my data. For my model prep I had to split the index manually at the row with 75% of my data for my train set and the other 25% for my test/validation set.Indexes had to be converted to Datetime index with a frequency of “d” in order to be fed into the model. 
+My model's RMSE is off by a mean of around 530 which is way better than my baseline model.
 
 ---
 
